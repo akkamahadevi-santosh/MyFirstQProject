@@ -1,0 +1,89 @@
+JPF Application boot failed.
+Tue Oct 23 14:56:00 IST 2018
+
+-----------------------------------------------
+Exception details.
+
+Class: java.lang.IllegalArgumentException
+Message: unknown plug-in ID - null
+
+Stack trace:
+
+org.java.plugin.registry.xml.PluginRegistryImpl.getPluginDescriptor(PluginRegistryImpl.java:729)
+org.java.plugin.standard.StandardPluginManager.getPlugin(StandardPluginManager.java:213)
+org.java.plugin.boot.DefaultApplicationInitializer.initApplication(DefaultApplicationInitializer.java:312)
+org.java.plugin.boot.Boot.initApplication(Boot.java:538)
+org.java.plugin.boot.Boot.boot(Boot.java:343)
+org.java.plugin.boot.Boot.main(Boot.java:243)
+
+-----------------------------------------------
+System properties:
+
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+gopherProxySet=false
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+java.class.path=lib/jpf-boot-1.5.jar
+java.class.version=54.0
+java.home=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
+java.io.tmpdir=/var/folders/vh/0pb7nx212l95w74x_ll4qzk1f02scy/T/
+java.library.path=/Users/akshay.ms/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.runtime.name=Java(TM) SE Runtime Environment
+java.runtime.version=10.0.1+10
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=10
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.java.com/bugreport/
+java.vendor.version=18.3
+java.version=10.0.1
+java.version.date=2018-04-17
+java.vm.compressedOopsMode=Zero based
+java.vm.info=mixed mode
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=10
+java.vm.vendor="Oracle Corporation"
+java.vm.version=10.0.1+10
+jdk.debug=release
+jpf.boot.mode=shell
+line.separator=
+
+os.arch=x86_64
+os.name=Mac OS X
+os.version=10.13.5
+path.separator=:
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+sun.arch.data.model=64
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.font.fontmanager=sun.font.CFontManager
+sun.io.unicode.encoding=UnicodeBig
+sun.java.command=lib/jpf-boot-1.5.jar
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=IN
+user.dir=/Users/akshay.ms/Desktop/git hub/QuTAP_SERVER_AGENT/AGENT/src
+user.home=/Users/akshay.ms
+user.language=en
+user.name=akshay.ms
+user.timezone=Asia/Kolkata
+
+-----------------------------------------------
+Runtime info:
+
+Memory TOTAL / FREE / MAX: 134217728 / 127926272 / 2147483648
+Available processors: 4
+System class loader: jdk.internal.loader.ClassLoaders$AppClassLoader@255316f2
+Thread context class loader: jdk.internal.loader.ClassLoaders$AppClassLoader@255316f2
+Security manager: null

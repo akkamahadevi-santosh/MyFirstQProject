@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.qutap.agent" version="0.0.4"
+	class="com.exilant.qutap.agent.CorePlugin">
+	<runtime>
+		<library id="core" path="classes/" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="codec" path="lib/commons-codec-1.9.jar" type="code">	</library>
+		<library id="logging" path="lib/commons-logging-1.0.4.jar" type="code">	</library>
+		<library id="logging1.2" path="lib/commons-logging-1.2.jar" type="code">	</library>
+		<library id="appcheCommon" path="lib/commons-io-2.4.jar" type="code">	</library>
+		<library id="httpclient" path="lib/httpclient-4.5.1.jar" type="code">	</library>
+		<library id="httpcore" path="lib/httpcore-4.4.3.jar" type="code">	</library>
+		<library id="httpmime" path="lib/httpmime-4.0.jar" type="code">	</library>
+		<library id="apachepmime" path="lib/apache-mime4j-0.6.jar" type="code">	</library>
+		<library id="servlet" path="lib/javax.servlet-api-3.1.0.jar" type="code">	</library>
+		<library id="http" path="lib/jetty-http-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="jetty" path="lib/jetty-io-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="security" path="lib/jetty-security-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="server" path="lib/jetty-server-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="servlets" path="lib/jetty-servlet-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="util" path="lib/jetty-util-9.3.6.v20151106.jar" type="code">	</library>
+		<library id="json" path="lib/json-20151123.jar" type="code"><export prefix="*" />	</library>
+		<library id="log4j" path="lib/log4j-1.2.4.jar" type="code">		</library>
+		<library id="httpClient" path="lib/hazelcast-3.11.jar" type="code">		</library>
+		<library id="httpCore" path="lib/hazelcast-client-3.11.jar" type="code"></library>
+		</runtime>
+	<extension-point id="Task">
+		<parameter-def id="class" />
+		<parameter-def id="name" />
+		<parameter-def id="description" multiplicity="none-or-one" />
+	</extension-point>
+	<extension-point id="Recording">
+		<parameter-def id="class" />
+		<parameter-def id="name" />
+		<parameter-def id="description" multiplicity="none-or-one" />
+	</extension-point>
+	
+	<extension-point id="Uploading">
+		<parameter-def id="class" />
+		<parameter-def id="name" />
+		<parameter-def id="description" multiplicity="none-or-one" />
+	</extension-point>
+</plugin>
