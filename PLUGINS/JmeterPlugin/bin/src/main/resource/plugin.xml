@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.jmeter" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent" />
+	</requires>
+		<runtime>
+		<library id="com.exilant.qutap.plugin.JmeterPlugin" path="classes/" type="code"/>
+		<library id="thoughtworks" path="lib/com.thoughtworks.xstream_1.3.0.jar" type="code"/>
+       <library id="common" path="lib/common-lang3.jar" type="code"/>
+       <library id="collectionssources" path="lib/commons-collections-3.2.1.jar" type="code"/>
+       <library id="commons-collections" path="lib/commons-collections4-4.1-javadoc.jar" type="code"/>
+       <library id="jarcommons" path="lib/commons-collections4-4.1.jar" type="code"/>
+       <library id="iocommons" path="lib/commons.io_2.0.1 2.jar" type="code"/>
+       <library id="JMeterPlugins" path="lib/JMeterPlugins-Standard.jar" type="code"/>
+       <library id="plugins-standard" path="lib/jmeter-plugins-standard-1.1.3.jar" type="code"/>
+       <library id="xmlpull" path="lib/xmlpull-xpp3-1.1.4c.jar" type="code"/>
+       <library id="ApacheJMeter" path="lib/ApacheJMeter_components-2.8.jar" type="code"/>
+       <library id="httpJMeter" path="lib/ApacheJMeter_http-2.6.jar" type="code"/>
+       <library id="CoreJMeter" path="lib/ApacheJMeter_core-2.8.jar" type="code"/>
+       <library id="jorphan" path="lib/jorphan-2.8.jar" type="code"/>
+       <library id="avalon" path="lib/avalon-framework-4.1.4.jar" type="code"/>
+       <library id="logkit" path="lib/logkit-2.0.jar" type="code"/>
+       <library id="jakarta" path="lib/apache-jakarta-oro 2.jar" type="code"/>
+       <library id="2" path="lib/junit-3.8.1.jar" type="code"/>
+       <library id="3" path="lib/log4j-1.2.4.jar" type="code"/>
+       <library id="25" path="lib/xml-apis-1.4.01.jar" type="code"/>
+       
+       
+       
+       
+        <library id="26" path="lib/asm-6.1.jar" type="code"/>
+        <library id="27" path="lib/bsf-2.4.0.jar" type="code"/>
+        <library id="28" path="lib/bsh-2.0b6.jar" type="code"/>
+        <library id="29" path="lib/bshclient.jar" type="code"/>
+        <library id="30" path="lib/caffeine-2.6.2.jar" type="code"/>
+        <library id="31" path="lib/commons-codec-1.11.jar" type="code"/>
+        <library id="32" path="lib/commons-collections-3.2.2.jar" type="code"/>
+        <library id="33" path="lib/commons-dbcp2-2.4.0.jar" type="code"/>
+        <library id="34" path="lib/commons-io-2.6.jar" type="code"/>
+        <library id="35" path="lib/commons-jexl-2.1.1.jar" type="code"/>
+        <library id="36" path="lib/commons-jexl3-3.1.jar" type="code"/>
+        <library id="37" path="lib/commons-lang3-3.8.jar" type="code"/>
+        <library id="38" path="lib/commons-math3-3.6.1.jar" type="code"/>
+        <library id="39" path="lib/commons-net-3.6.jar" type="code"/>
+        <library id="40" path="lib/commons-pool2-2.6.0.jar" type="code"/>
+        <library id="41" path="lib/darcula.jar" type="code"/>
+        <library id="42" path="lib/dec-0.1.2.jar" type="code"/>
+        <library id="43" path="lib/dnsjava-2.1.8.jar" type="code"/>
+        <library id="44" path="lib/freemarker-2.3.28.jar" type="code"/>
+        <library id="45" path="lib/geronimo-jms_1.1_spec-1.1.1.jar" type="code"/>
+        <library id="46" path="lib/groovy-all-2.4.15.jar" type="code"/>
+        <library id="47" path="lib/hamcrest-core-1.3.jar" type="code"/>
+        <library id="48" path="lib/hamcrest-date-2.0.4.jar" type="code"/>
+        <library id="49" path="lib/httpasyncclient-4.1.3.jar" type="code"/>
+        <library id="50" path="lib/httpclient-4.5.6.jar" type="code"/>
+        <library id="51" path="lib/httpcore-4.4.10.jar" type="code"/>
+        <library id="52" path="lib/httpcore-nio-4.4.10.jar" type="code"/>
+        <library id="53" path="lib/httpmime-4.5.6.jar" type="code"/>
+        <library id="54" path="lib/javax.activation-1.2.0.jar" type="code"/>
+        <library id="55" path="lib/javax.activation-api-1.2.0.jar" type="code"/>
+         <library id="56" path="lib/jcharts-0.7.5.jar" type="code"/>
+          <library id="57" path="lib/jcl-over-slf4j-1.7.25.jar" type="code"/>
+           <library id="58" path="lib/jodd-core-4.1.4.jar" type="code"/>
+            <library id="59" path="lib/jodd-lagarto-4.1.4.jar" type="code"/>
+             <library id="60" path="lib/jodd-log-4.1.4.jar" type="code"/>
+              <library id="61" path="lib/jodd-props-4.1.4.jar" type="code"/>
+               <library id="62" path="lib/jorphan.jar" type="code"/>
+                <library id="63" path="lib/json-path-2.4.0.jar" type="code"/>
+                 <library id="64" path="lib/json-smart-2.3.jar" type="code"/>
+                  <library id="65" path="lib/jsoup-1.11.2.jar" type="code"/>
+                   <library id="67" path="lib/jtidy-r938.jar" type="code"/>
+                    <library id="68" path="lib/junit-4.12.jar" type="code"/>
+                     <library id="69" path="lib/log4j-1.2-api-2.11.0.jar" type="code"/>
+                      <library id="70" path="lib/log4j-api-2.11.0.jar" type="code"/>
+                       <library id="71" path="lib/log4j-core-2.11.0.jar" type="code"/>
+                        <library id="72" path="lib/log4j-slf4j-impl-2.11.0.jar" type="code"/>
+                         <library id="73" path="lib/mail-1.5.0-b01.jar" type="code"/>
+                          <library id="74" path="lib/mongo-java-driver-2.11.3.jar" type="code"/>
+                           <library id="75" path="lib/oro-2.0.8.jar" type="code"/>
+                            <library id="76" path="lib/ph-commons-9.1.2.jar" type="code"/>
+                             <library id="77" path="lib/ph-css-6.1.1.jar" type="code"/>
+                              <library id="78" path="lib/rhino-1.7.10.jar" type="code"/>
+                               <library id="79" path="lib/rsyntaxtextarea-2.6.1.jar" type="code"/>
+                                <library id="80" path="lib/Saxon-HE-9.8.0-12.jar" type="code"/>
+                                 <library id="81" path="lib/serializer-2.7.2.jar" type="code"/>
+                                  <library id="82" path="lib/slf4j-api-1.7.25.jar" type="code"/>
+                                   <library id="83" path="lib/slf4j-ext-1.7.25.jar" type="code"/>
+                                   
+                                  <library id="84" path="lib/tika-parsers-1.18.jar" type="code"/>
+                                      <library id="85" path="lib/xalan-2.7.2.jar" type="code"/>
+                                          <library id="86" path="lib/xercesImpl-2.11.0.jar" type="code"/>
+                                              <library id="87" path="lib/xml-apis-1.4.01.jar" type="code"/>
+                                                  <library id="88" path="lib/xmlgraphics-commons-2.2.jar" type="code"/>
+                                                      <library id="89" path="lib/xmlpull-1.1.3.1.jar" type="code"/>
+                                                          <library id="90" path="lib/xpp3_min-1.1.4c.jar" type="code"/>
+                                                              <library id="91" path="lib/xstream-1.4.10.jar" type="code"/>
+       
+	</runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Task"
+		id="JmeterPlugin">
+		<parameter id="class"
+			value="com.exilant.qutap.plugin.JmeterPlugin" />
+		<parameter id="name" value="jmxConnector task plugin" />
+		<parameter id="description"	value="Task for jmxConnector plugin task" />
+	</extension>
+</plugin>

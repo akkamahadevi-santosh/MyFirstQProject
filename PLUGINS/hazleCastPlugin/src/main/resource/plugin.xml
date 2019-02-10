@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.hazleCastPlugin" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.itap.agent" />
+	</requires>
+	<runtime>
+		<library id="com.exilant.itap.plugin.hazleCastPlugin" path="classes/" type="code"/>	
+	   </runtime>
+	<extension plugin-id="com.exilant.itap.agent" point-id="Task" id="hazleCastPlugin">
+		<parameter id="class" value="com.exilant.plugin.hazleCastPlugin"/>
+		<parameter id="name" value="hazleCastPlugin" />
+		<parameter id="description"	value="hazleCastPlugin plugin task" />
+	</extension>
+</plugin>

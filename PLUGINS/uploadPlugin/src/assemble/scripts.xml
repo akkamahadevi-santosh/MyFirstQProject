@@ -1,0 +1,42 @@
+<assembly>
+  <id>bin</id>
+  <!-- START SNIPPET: formats -->
+  <formats>
+    <format>zip</format>
+  </formats>
+  <!-- END SNIPPET: formats -->
+  <!-- START SNIPPET: fileSets -->
+  <fileSets>
+    <fileSet>
+      <includes>
+        <include>README*</include>
+      </includes>
+    </fileSet>
+     
+    <fileSet>
+      <directory>target</directory>
+      <outputDirectory>com.exilant.qutap.plugin.uploadPlugin/</outputDirectory>
+      <includes>
+        <include>classes/**</include>
+      </includes>
+    </fileSet>
+    
+    <fileSet>
+      <directory>src/main/resource</directory>
+      <outputDirectory>com.exilant.qutap.plugin.uploadPlugin/</outputDirectory>
+      <includes>
+        <include>*.xml</include>
+      </includes>
+    </fileSet>
+    
+    <fileSet>
+      <directory>src/lib</directory>
+      <outputDirectory>com.exilant.qutap.plugin.uploadPlugin/lib</outputDirectory>
+      <includes>
+        <include>*.jar</include>
+      </includes>
+    </fileSet>
+    
+  </fileSets>
+  <!-- END SNIPPET: fileSets -->
+</assembly>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.testing.dbRunner" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent"/>
+	</requires>
+	<runtime>
+		<library id="com.exilant.qutap.plugin.dbRunnerPlugin" path="classes/" type="code"/>	
+		<library id="mysql" path="lib/mysql-connector-java-5.1.37.jar" type="code"/>
+	  </runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Task" id="dbRunnerPlugin">
+		<parameter id="class"
+			value="com.exilant.qutap.plugin.dbRunnerPlugin"/>
+		<parameter id="name" value="db Runnerplugin" />
+		<parameter id="description"	value="dbrunner plugin task" />
+	</extension>
+</plugin>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.mongoDb" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent" />
+	</requires>
+	<runtime>
+		<library id="com.exilant.qutap.plugin.mongoDbPlugin" path="classes/" type="code"/>
+		<library id="mongodb" path="lib/mongo-java-driver-2.10.1.jar" type="code"/>			
+	   </runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Task" id="mongoDbPlugin">
+		<parameter id="class"
+			value="com.exilant.qutap.plugin.mongoDbPlugin"/>
+		<parameter id="name" value="mongo dbplugin" />
+		<parameter id="description"	value="Task for mongodb plugin" />
+	</extension>
+</plugin>

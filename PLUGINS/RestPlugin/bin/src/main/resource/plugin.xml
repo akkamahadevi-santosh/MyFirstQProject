@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.rest" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent" />
+		</requires>
+	<runtime>
+		<library id="com.exilant.itap.plugin.RestPlugin" path="classes/" type="code"/>
+       <library id="htmlunit" path="lib/htmlunit-2.18.jar" type="code"/>
+		<library id="htmlunitcore" path="lib/htmlunit-core-js-2.17.jar" type="code"/>
+		<library id="httpclient" path="lib/httpclient-4.5.1.jar" type="code"/>
+		<library id="httpcore" path="lib/httpcore-4.4.3.jar" type="code"/>
+		<library id="httpmime" path="lib/httpmime-4.5.jar" type="code"/>
+		<library id="cli" path="lib/commons-cli-1.1.jar" type="code"/>	
+	    <library id="proxy" path="lib/proxy-vole_20131209.jar" type="code"/>	
+	    <library id="bouncy" path="lib/bouncycastle-jce-jdk13-112.jar" type="code"/>
+	    <library id="xmlparser" path="lib/apache-xml-xerces.jar" type="code"/>
+	    <library id="jersey" path="lib/jersey-client-1.17.1.jar" type="code"/>	
+	    <library id="jersey-core" path="lib/jersey-core-1.17.1.jar" type="code"/>	
+	    <library id="8" path="lib/junit-4.4.jar" type="code"/>
+	    <library id="2" path="lib/junit-3.8.1.jar" type="code"/>
+		<library id="3" path="lib/log4j-1.2.4.jar" type="code"/>
+		<library id="4" path="lib/nekohtml-1.9.22.jar" type="code"/>
+		<library id="5" path="lib/netty-3.5.2.Final.jar" type="code"/>
+		<library id="6" path="lib/sac-1.3.jar" type="code"/>	
+		<library id="7" path="lib/rsyntaxtextarea-2.5.0.jar" type="code"/>	
+			   
+	</runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Task" id="RestPlugin">
+		<parameter id="class" value="com.exilant.qutap.rest.RestPlugin"/>
+		<parameter id="name" value="Rest task plugin" />
+		<parameter id="description"	value="Task for simple plugin task" />
+	</extension>
+</plugin>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plu.record" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent" />
+		</requires>
+	<runtime>
+		<library id="com.exilant.qutap.plugin.RecordPlugin" path="classes/" type="code"/>	
+		<library id="xuggle" path="lib/xuggle-xuggler-noarch-5.4 2.jar" type="code"/>
+        <library id="slf4j" path="lib/slf4j-log4j12-1.7.16.jar" type="code"/>
+        <library id="Apislf4j" path="lib/slf4j-api-1.7.16.jar" type="code"/>
+       <library id="sikuli" path="lib/sikuli-api-1.0.2-sources.jar" type="code"/>
+       <library id="monte" path="lib/monte-repack-1.0.jar" type="code"/>
+       <library id="logback-core" path="lib/logback-core-0.9.6.jar" type="code"/>
+       <library id="logback" path="lib/logback-classic-0.9-sources.jar" type="code"/>
+       <library id="chqos" path="lib/ch.qos.logback.classic-0.9.28.jar" type="code"/>
+       <library id="jmf" path="lib/jmf.jar" type="code"/>
+	   </runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Recording" id="RecordPlugin">
+		<parameter id="class" value="com.exilant.qutap.plugin.RecordPlugin"/>
+		<parameter id="name" value="recordPlugin recordPlugin" />
+		<parameter id="description"	value="recordPlugin plugin task" />
+	</extension>
+</plugin>

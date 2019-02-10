@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.selenium" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.qutap.agent" />
+	</requires>
+		<runtime>
+		<library id="com.exilant.qutap.plugin.SeleniumPlugin" path="classes/" type="code"/>		
+		<library id="cglib" path="lib/cglib-nodep-2.1_3.jar" type="code"/>
+		<library id="codec" path="lib/commons-codec-1.9.jar" type="code"/>
+		<library id="collections" path="lib/commons-collections-3.2.1.jar" type="code"/>
+		<library id="exec" path="lib/commons-exec-1.3.jar" type="code"/>
+		<library id="io" path="lib/commons-io-2.4.jar" type="code"/>
+		<library id="lang3" path="lib/commons-lang3-3.4.jar" type="code"/>
+		<library id="logging" path="lib/commons-logging-1.0.4.jar" type="code"/>
+		<library id="htmlunitcore" path="lib/htmlunit-core-js-2.17.jar" type="code"/>
+		<library id="httpclient" path="lib/httpclient-4.5.1.jar" type="code"/>
+		<library id="httpcore" path="lib/httpcore-4.4.3.jar" type="code"/>
+		<library id="httpmime" path="lib/httpmime-4.5.jar" type="code"/>
+		<library id="gson" path="lib/gson-2.3.1.jar" type="code"/>
+		<library id="guava" path="lib/guava-18.0.jar" type="code"/>
+		<library id="2" path="lib/junit-3.8.1.jar" type="code"/>
+		<library id="3" path="lib/log4j-1.2.4.jar" type="code"/>
+		
+		<library id="31" path="lib/slf4j-api-1.7.25.jar" type="code"/>
+
+		
+		
+		<library id="12" path="lib/animal-sniffer-annotations-1.14.jar" type="code"/>
+<library id="13" path="lib/appengine-endpoints-1.9.24.jar" type="code"/>
+<library id="14" path="lib/byte-buddy-1.8.15.jar" type="code"/>
+<library id="15" path="lib/checker-compat-qual-2.0.0.jar" type="code"/>
+<library id="16" path="lib/commons-codec-1.10.jar" type="code"/>
+<library id="17" path="lib/commons-collections-3.2.2.jar" type="code"/>
+<library id="18" path="lib/commons-exec-1.3.jar" type="code"/>
+<library id="19" path="lib/commons-io-2.4.jar" type="code"/>
+<library id="112" path="lib/commons-lang3-3.4.jar" type="code"/>
+<library id="113" path="lib/commons-logging-1.2.jar" type="code"/>
+<library id="114" path="lib/cssparser-0.9.16.jar" type="code"/>
+<library id="115" path="lib/error_prone_annotations-2.1.3.jar" type="code"/>
+<library id="116" path="lib/guava-25.0-jre.jar" type="code"/>
+<library id="117" path="lib/hazelcast-3.6.2.jar" type="code"/>
+<library id="118" path="lib/htmlunit-2.18.jar" type="code"/>
+<library id="119" path="lib/htmlunit-core-js-2.17.jar" type="code"/>
+<library id="1111" path="lib/httpclient-4.5.1.jar" type="code"/>
+<library id="1112" path="lib/httpcore-4.4.3.jar" type="code"/>
+<library id="1113" path="lib/httpmime-4.5.jar" type="code"/>
+<library id="1114" path="lib/j2objc-annotations-1.1.jar" type="code"/>
+<library id="1115" path="lib/javax.servlet-api-3.1.0.jar" type="code"/>
+<library id="1116" path="lib/jcip-annotations-1.0.jar" type="code"/>
+<library id="1117" path="lib/jcommander-1.72.jar" type="code"/>
+<library id="1118" path="lib/jetty-io-9.2.12.v20150709.jar" type="code"/>
+<library id="1119" path="lib/jetty-repacked-9.4.12.v20180830.jar" type="code"/>
+<library id="1110" path="lib/jetty-util-9.2.12.v20150709.jar" type="code"/>
+<library id="a1" path="lib/jsr305-1.3.9.jar" type="code"/>
+<library id="a11" path="lib/junit-3.8.1.jar" type="code"/>
+<library id="a21" path="lib/nekohtml-1.9.22.jar" type="code"/>
+<library id="a31" path="lib/okhttp-3.11.0.jar" type="code"/>
+<library id="a41" path="lib/okio-1.14.0.jar" type="code"/>
+<library id="a51" path="lib/sac-1.3.jar" type="code"/>
+<library id="a61" path="lib/selenium-api-3.141.5.jar" type="code"/>
+<library id="a71" path="lib/selenium-chrome-driver-3.141.5.jar" type="code"/>
+<library id="a81" path="lib/selenium-edge-driver-3.141.5.jar" type="code"/>
+<library id="s11" path="lib/selenium-firefox-driver-3.141.5.jar" type="code"/>
+<library id="sw1" path="lib/selenium-htmlunit-driver-2.52.0.jar" type="code"/>
+<library id="s31" path="lib/selenium-ie-driver-3.141.5.jar" type="code"/>
+<library id="s41" path="lib/selenium-java-3.141.5.jar" type="code"/>
+<library id="s51" path="lib/selenium-opera-driver-3.141.5.jar" type="code"/>
+<library id="s61" path="lib/selenium-remote-driver-3.141.5.jar" type="code"/>
+<library id="s71" path="lib/selenium-safari-driver-3.141.5.jar" type="code"/>
+<library id="s81" path="lib/selenium-server-3.141.5.jar" type="code"/>
+<library id="s91" path="lib/selenium-support-3.141.5.jar" type="code"/>
+<library id="s101" path="lib/serializer-2.7.2.jar" type="code"/>
+<library id="1q1" path="lib/snakeyaml-1.19.jar" type="code"/>
+<library id="1q2" path="lib/websocket-api-9.2.12.v20150709.jar" type="code"/>
+<library id="1q3" path="lib/websocket-client-9.2.12.v20150709.jar" type="code"/>
+<library id="1q4" path="lib/websocket-common-9.2.12.v20150709.jar" type="code"/>
+<library id="1q5" path="lib/xalan-2.7.2.jar" type="code"/>
+<library id="1q6" path="lib/xercesImpl-2.11.0.jar" type="code"/>
+<library id="1q67" path="lib/xml-apis-1.4.01.jar" type="code"/>
+		
+		
+		
+		
+		
+		
+		
+		</runtime>
+	<extension plugin-id="com.exilant.qutap.agent" point-id="Task" id="SeleniumPlugin">
+		<parameter id="class" value="com.exilant.qutap.plugin.SeleniumPlugin" />
+		<parameter id="name" value="Selenium task plugin" />
+		<parameter id="description"	value="Task for selenium plugin task" />
+	</extension>
+</plugin>

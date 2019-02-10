@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.exilant.plugin.gatlingPlugin" version="0.0.4">
+	<requires>
+		<import plugin-id="com.exilant.itap.agent" />
+	</requires>
+	<runtime>
+		<library id="exilant.itap.plugin.gatlingPlugin" path="classes/" type="code"/>       
+	</runtime>
+	<extension plugin-id="com.exilant.itap.agent" point-id="Task" id="gatlingPlugin">
+		<parameter id="class" value="com.exilant.itap.rest.gatlingPlugin"/>
+		<parameter id="name" value="gatlingPlugin plugin" />
+		<parameter id="description"	value="gatling plugin task" />
+	</extension>
+</plugin>
