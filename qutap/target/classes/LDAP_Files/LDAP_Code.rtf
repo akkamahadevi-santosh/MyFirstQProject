@@ -1,0 +1,539 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;\red127\green1\blue85;
+\red106\green62\blue62;\red0\green0\blue192;\red42\green0\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\'a0{\field{\*\fldinst{HYPERLINK "http://www.hascode.com/2011/06/creating-a-ldap-server-for-your-development-environment-in-5-minutes/"}}{\fldrslt \cf3 \expnd0\expndtw0\kerning0
+\ul \ulc3 \outl0\strokewidth0 \strokec3 http://www.hascode.com/2011/06/creating-a-ldap-server-for-your-development-environment-in-5-minutes/}}\'a0--> configure ldap in eclipse\
+\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "http://krams915.blogspot.in/2011/01/ldap-apache-directory-studio-basic.html"}}{\fldrslt \cf3 \expnd0\expndtw0\kerning0
+\ul \ulc3 \outl0\strokewidth0 \strokec3 http://krams915.blogspot.in/2011/01/ldap-apache-directory-studio-basic.html}}\'a0--> create local ldap directory\
+\
+\pard\pardeftab720
+
+\f1\fs22 \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 public\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 class\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  LdapQuery \{\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 public\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 void\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  main(String[] \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 args\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  NamingException \{\
+ Hashtable<String, String> \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Hashtable<String, String>();\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 INITIAL_CONTEXT_FACTORY\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "com.sun.jndi.ldap.LdapCtxFactory"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 PROVIDER_URL\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "ldap://localhost:10389/"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_AUTHENTICATION\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "simple"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_PRINCIPAL\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "cn=Hugo Williams,ou=users,o=mojo"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_CREDENTIALS\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "pass"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  DirContext \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  InitialDirContext(\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+\uc0\u8232 \
+\uc0\u8232 \
+\uc0\u8232 \
+\uc0\u8232 \
+\uc0\u8232 \
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 final\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  String \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 ldapURI\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "ldap://localhost:10389/o=mojo"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 final\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  String \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 contextFactory\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "com.sun.jndi.ldap.LdapCtxFactory"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  DirContext ldapContext () \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Exception \{\
+ Hashtable<String,String> \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Hashtable <String,String>();\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 return\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  ldapContext(\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \}\
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  DirContext ldapContext (Hashtable <String,String>\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Exception \{\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 INITIAL_CONTEXT_FACTORY\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 contextFactory\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 PROVIDER_URL\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 ldapURI\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ DirContext \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  InitialDirContext(\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 return\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \}\
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  String getUid (String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Exception \{\
+ DirContext \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = ldapContext();\
+\uc0\u8232 \
+ String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 filter\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "(uid="\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 ")"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\
+ SearchControls \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctrl\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  SearchControls();\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctrl\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .setSearchScope(SearchControls.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SUBTREE_SCOPE\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 NamingEnumeration\expnd0\expndtw0\kerning0
+\ulnone \outl0\strokewidth0  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 answer\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .search(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 ""\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 filter\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctrl\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+\uc0\u8232 \
+ String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 if\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  (\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 answer\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .hasMore()) \{\
+ SearchResult \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 result\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = (SearchResult) \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 answer\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .next();\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 result\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .getNameInNamespace();\
+ \}\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 else\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \{\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 null\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\
+ \}\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 answer\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .close();\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 return\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \}\
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 private\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 boolean\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  testBind (String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 password\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Exception \{\
+ Hashtable<String,String> \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Hashtable <String,String>();\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_AUTHENTICATION\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "simple"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_PRINCIPAL\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .put(Context.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SECURITY_CREDENTIALS\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 password\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 try\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \{\
+ ldapContext(\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 env\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \}\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 catch\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  (javax.naming.AuthenticationException \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 e\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \{\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 return\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 false\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \}\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 return\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 true\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ;\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \}\
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 public\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 static\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 void\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  main(String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 args\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 []) \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 throws\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Exception \{\
+\uc0\u8232 \
+\uc0\u8232 \
+ Scanner \cf5 \expnd0\expndtw0\kerning0
+\ul \ulc5 \outl0\strokewidth0 \strokec5 sc\cf2 \expnd0\expndtw0\kerning0
+\ulnone \outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  Scanner(System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 in\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+\uc0\u8232 \
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "Enter Username, "\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 sc\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .nextLine();\'a0\
+\uc0\u8232 \
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "Enter Password, "\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 password\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 sc\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .nextLine();\
+\uc0\u8232 \
+ String \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = getUid(\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+\uc0\u8232 \
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 if\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  (\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  != \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 null\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ) \{\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 if\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  ( testBind( \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 dn\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 password\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  ) ) \{\
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println( \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "user '"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "' authentication succeeded"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  );\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  System.exit(0);\
+ \}\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 else\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \{\
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println( \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "user '"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "' authentication failed"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  );\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  System.exit(1);\
+ \}\
+ \}\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 else\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \{\
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println( \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "user '"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 user\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  + \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "' not found"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  );\
+ System.exit(1);\
+ \}\
+ \}\
+\uc0\u8232 \
+\uc0\u8232 \
+\'a0\
+ SearchControls \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 searchControls\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 new\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  SearchControls();\
+ \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 searchControls\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .setSearchScope(SearchControls.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 SUBTREE_SCOPE\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ NamingEnumeration<SearchResult> \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 enumeration\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 ctx\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .search(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "ou=users,o=mojo"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "(objectClass=person)"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 searchControls\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 );\
+ \cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 while\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  (\cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 enumeration\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .hasMore()) \{\
+ SearchResult \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 result\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 enumeration\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .next();\
+ Attributes \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 attrs\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  = \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 result\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .getAttributes();\
+ System.\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 out\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .println(String.format(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "User found.. %s, %s, %s"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 , \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 attrs\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .get(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "cn"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ), \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 attrs\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .get(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "uid"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ), \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 attrs\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 .get(\cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 "objectClass"\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 )));\
+ \}\
+ \}\
+\}\
+\uc0\u8232 \
+\uc0\u8232 \
+\uc0\u8232 \
+\pard\pardeftab720
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 package com.org;\uc0\u8232 import java.util.*;\u8232 import javax.naming.*;\u8232 import java.util.regex.*;\u8232 import javax.naming.directory.*;\
+public class LdapAuth \{/*\uc0\u8232 private final static String ldapURI = "ldap://localhost:10389/dc=example,dc=com";\u8232 private final static String contextFactory = "com.sun.jndi.ldap.LdapCtxFactory";\
+private static DirContext ldapContext () throws Exception \{\uc0\u8232 Hashtable<String,String> env = new Hashtable <String,String>();\u8232 return ldapContext(env);\u8232 \}\
+private static DirContext ldapContext (Hashtable <String,String>env) throws Exception \{\uc0\u8232 env.put(Context.INITIAL_CONTEXT_FACTORY, contextFactory);\u8232 env.put(Context.PROVIDER_URL, ldapURI);\u8232 DirContext ctx = new InitialDirContext(env);\u8232 return ctx;\u8232 \}\
+private static String getUid (String user) throws Exception \{\uc0\u8232 DirContext ctx = ldapContext();\
+String filter = "(uid=" + user + ")";\uc0\u8232 SearchControls ctrl = new SearchControls();\u8232 ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);\u8232 NamingEnumeration answer = ctx.search("", filter, ctrl);\
+String dn;\uc0\u8232 if (answer.hasMore()) \{\u8232 SearchResult result = (SearchResult) answer.next();\u8232 dn = result.getNameInNamespace();\u8232 \}\u8232 else \{\u8232 dn = null;\u8232 \}\u8232 answer.close();\u8232 return dn;\u8232 \}\
+private static boolean testBind (String dn, String password) throws Exception \{\uc0\u8232 Hashtable<String,String> env = new Hashtable <String,String>();\u8232 env.put(Context.SECURITY_AUTHENTICATION, "simple");\u8232 env.put(Context.SECURITY_PRINCIPAL, dn);\u8232 env.put(Context.SECURITY_CREDENTIALS, password);\
+try \{\uc0\u8232 ldapContext(env);\u8232 \}\u8232 catch (javax.naming.AuthenticationException e) \{\u8232 return false;\u8232 \}\u8232 return true;\u8232 \}\
+public static void main(String args[]) throws Exception \{\uc0\u8232 if (args.length != 2) \{\u8232 System.out.println( "requried username and password" );\u8232 System.exit(1);\u8232 \}\
+\uc0\u8232 Scanner sc = new Scanner(System.in);\u8232 \u8232 System.out.println("Enter Username, ");\u8232 String user = sc.nextLine(); \u8232 \u8232 System.out.println("Enter Password, ");\u8232 String password = sc.nextLine();\u8232 \u8232 String dn = getUid(user);\
+if (dn != null) \{\uc0\u8232 Found user - test password \u8232 if ( testBind( dn, password ) ) \{\u8232 System.out.println( "user '" + user + "' authentication succeeded" );\u8232 System.exit(0);\u8232 \}\u8232 else \{\u8232 System.out.println( "user '" + user + "' authentication failed" );\u8232 System.exit(1);\u8232 \}\u8232 \}\u8232 else \{\u8232 System.out.println( "user '" + user + "' not found" );\u8232 System.exit(1);\u8232 \}\u8232 \}\u8232 */\u8232 \u8232 public static void main(String[] args) \{\u8232 \u8232 \}\
+\}\
+\pard\pardeftab720
+
+\f1\fs22 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \uc0\u8232 \
+\uc0\u8232 \
+Thanks,\
+Ashoka\
+}
