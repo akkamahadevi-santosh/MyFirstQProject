@@ -1,0 +1,17 @@
+qutap :
+  excelPath :  /Users/vamsi.c/Desktop/excelPath 
+  excecutionPath: http://10.2.0.67:8080/qutapServer/engine/testcase/execute
+  excecutionPathSuite: http://10.2.0.67:8080/qutapServer/engine/testSuite/execute
+  memberIP: 10.2.0.67
+  profilerPortNum: 3031
+  remoteIpProfiler: 10.2.0.67
+#security:
+# oauth2:
+#   resource:
+#     userInfoUri: https://dev-286987.oktapreview.com/oauth2/default/v1/userinfo
+#     
+#okta:
+# oauth2:
+#   # Client ID from above step
+#   clientId: 0oahgc7u13pVooNSY0h7
+#   issuer: https://dev-286987.oktapreview.com/oauth2/default

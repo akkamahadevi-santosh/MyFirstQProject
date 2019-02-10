@@ -1,0 +1,76 @@
+{
+  "projectId": "P124",
+  "projectName": "TAP1",
+  "projectDescription": "DESCRIPTION",
+  "moduleList": [
+    {
+      "moduleId": "M234",
+      "moduleName": "TAP1",
+      "requirementList": [
+        {
+          "requirementId": "R568",
+          "requirementName": "FSD-TAP V2.1",
+          "requirementCases": "1.3.2 - Current System : Shift Swap",
+          "requirementDescription": "Time away project screen changes",
+          "testScenarioList": [
+            {
+              "testScenarioId": "1",
+              "testScenarioName": "AAR lINK",
+              "testScenarioDescription": ""
+            },
+            {
+              "testScenarioId": "2",
+              "testScenarioName": "AAR lINK",
+              "testScenarioDescription": ""
+            }
+          ]
+        },
+        {
+          "requirementId": "R570",
+          "requirementName": "FSD-TAP V2.1",
+          "requirementCases": "1.3.2 - Current System : Shift Swap",
+          "requirementDescription": "Time away project screen changes",
+          "testScenarioList": [
+            {
+              "testScenarioId": "3",
+              "testScenarioName": "AAR lINK1",
+              "testScenarioDescription": ""
+            }
+          ]
+        },
+        {
+          "requirementId": "R572",
+          "requirementName": "FSD-TAP V2.1",
+          "requirementCases": "1.3.2 - Current System : Shift Swap",
+          "requirementDescription": "Time away project screen changes",
+          "testScenarioList": [
+            {
+              "testScenarioId": "4",
+              "testScenarioName": "AAR lINK2",
+              "testScenarioDescription": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleId": "M235",
+      "moduleName": "TAP4",
+      "requirementList": [
+        {
+          "requirementId": "R573",
+          "requirementName": "FSD-TAP V2.1",
+          "requirementCases": "1.3.2 - Current System : Shift Swap",
+          "requirementDescription": "Time away project screen changes",
+          "testScenarioList": [
+            {
+              "testScenarioId": "5",
+              "testScenarioName": "",
+              "testScenarioDescription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
